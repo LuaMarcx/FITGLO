@@ -73,11 +73,11 @@ recommend_workoutSystem:-
             group_set_s(shred, Intensity_answer)).
 
 %seperates the workouts in the set
-writeln(X) :- write(X), nl.
+my_writeln(X) :- write(X), nl.
 
 %this the generates and displays based on if it is shred or bulk, prints intensity, map lists the exercises and displays duration
-group_set_s(shred, Intensity):- workout_set(shred, Intensity, Exercises, TotalDuration),nl,maplist(writeln, Exercises),nl, write('Total duration in seconds: '),write(TotalDuration).
-group_set_b(bulk, Intensity):- workout_set(bulk, Intensity, Exercises, TotalDuration),nl,maplist(writeln, Exercises), nl, write('Total duration in seconds: '),write(TotalDuration).
+group_set_s(shred, Intensity):- workout_set(shred, Intensity, Exercises, TotalDuration),nl,maplist(my_writeln, Exercises),nl, write('Total duration in seconds: '),write(TotalDuration).
+group_set_b(bulk, Intensity):- workout_set(bulk, Intensity, Exercises, TotalDuration),nl,maplist(my_writeln, Exercises), nl, write('Total duration in seconds: '),write(TotalDuration).
 
 
 % Query for starting the Workout Set recommendation system
@@ -160,14 +160,3 @@ recommend_recipeSystem :-
 
 % Query for starting the recommendation system
 %?- recommend_recipeSystem.
-
-
-
-
-
-
-
-
-
-
-
