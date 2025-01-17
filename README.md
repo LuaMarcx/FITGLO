@@ -1,2 +1,3 @@
 # FITGLO
-Health Personal Assistant - HackReason 2025
+#HackReason 2025
+Health Personal Assistant
